@@ -175,3 +175,12 @@ figure {
     border-top: 1px solid rgba(0,0,0,.125);
     background-color: rgba(255,255,255,.55);
 }
+
+.lal-word {
+    color: #ff002d;
+    font-style: italic;
+}
+.lal-word:hover {
+    color: #980000;
+    text-decoration: none;
+}

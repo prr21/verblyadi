@@ -38,10 +38,10 @@
 				
 					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				  	  <div class="navbar-nav">
-				    	<a class="nav-item nav-link active" href="https://verblyadi.000webhostapp.com/">Главная <span class="sr-only">(current)</span></a>
+				    	<a class="nav-item nav-link active" href="#">главная</a>
 				    	<a class="nav-item nav-link" href="gallery.html">галерея</a>
-				    	<a class="nav-item nav-link" href="#">Prr</a>
-				    	<a class="nav-item nav-link" href="#">Prrr</a>
+				    	<a class="nav-item nav-link" href="dictionary.html">Словарь</a>
+				    	<a class="nav-item nav-link" href="test.html">prrr</a>
 				      </div>
 				  	</div>									  	
 
@@ -53,8 +53,10 @@
 		  </div>
 
 		  <div class="d-flex justify-content-lg-center">
-		    <div class="header-text text-center col-12 col-lg-8 border p-4 p-lg-3">
-			  <h1 class="lead">Добро пожаловать на официальный сайт OAO «Вербляди»</h1>
+		    <div class="header-text text-center col-12 col-lg-8 border p-2 p-lg-4">
+			  <h1 class="lead">
+			      <span class="d-none d-sm-block">Добро пожаловать на</span> Oфициальный сайт OAO «Вербляди»
+			  </h1>
 		    </div>
 		  </div>
 
@@ -66,12 +68,12 @@
 		  <div class="row d-flex justify-content-center">
 
 		    <div class="wrap-header text-center">
-			  <h2 class="font-italic">О нашей компании</h2>
+			  <h2 class="font-italic">О нашей компании</h2>	
 			</div>
 			  
 			<div class="d-md-flex align-items-center justify-content-md-between col-12 bg-light border p-2 p-lg-4">
 			  <div class="text-center">
-			    <p>Совсем заброшка <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta facere quas obcaecati repudiandae consequuntur eos, sapiente vel nam exercitationem porro sed, fugiat cumque placeat, ipsa consectetur quia autem dignissimos. Quam nemo eius, aperiam facere, libero ut, aliquid quo perspiciatis alias magnam odit porro tempora totam corporis.</p>
+			    <p>Совсем заброшка <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A nobis, optio officiis! Enim alias cupiditate quisquam ex, asperiores facilis corporis nostrum magnam. Placeat delectus quasi ipsum id illo. Totam exercitationem qui incidunt sint atque, voluptatum iusto corporis molestiae temporibus! Ex accusamus provident recusandae, quam dolore, possimus quo id. Nostrum debitis similique, dolores adipisci. Fugit unde eaque, reprehenderit soluta sint sit!</p>
 		      </div>
 			  <div class="text-center pl-md-4">
 			    <img src="img/gerbovaya.png" alt="Руководство Верблядей, логотип">		  			
@@ -170,17 +172,12 @@
 
 				<div>
 				  <div class="person-bio pt-md-4">
-			  	    <h4><a target="_blank" href="https://vk.com/iiii_ii_i" class="nav-link important-person">Дмитрий Эрбов</a></h4>
+			  	    <h4><a target="_blank" href="https://vk.com/iiii_ii_i" class="nav-link h-important">Дмитрий Эрбов</a></h4>
 			  		<p class="text-muted">Глава, Царь, Создатель. <br>143 уровень</p>
 			  	  </div>
 
 				  <div class="description">
-			   		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			   		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			   		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			   		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			   		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			   		proident, sunt in culpa qui officia deserunt mollit anim id est laboru.</p>
+			   		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ipsa id odio a vero perspiciatis error лаль voluptatem voluptatibus necessitatibus iusto sed doloremque corporis ducimus, dolore, numquam eius ad suscipit прр quam veniam, atque exercitationem, illum veritatis laudantium illo! Quas, reiciendis, aspernatur.</p>
 			   	  </div>
 			   	</div>
 
@@ -210,7 +207,7 @@
 
 	</div>
 
-	<!-- <div class="container">
+	<div class="container">
 	  <div class="container-wrap row d-flex justify-content-center">
 		<div class="vk-comments col-12 col-lg-10 p-0">
 		  <div id="vk_comments"></div>
@@ -222,7 +219,7 @@
 		  </script>
 		</div>
 	  </div> 
-	</div> -->
+	</div>
 
 	<footer class="container-fluid bg-secondary">
 	  <div class="text-center text-light">
@@ -254,10 +251,131 @@
 		  </div>
 
 		</div>
-					  
+
+			  
 	  </div>
 	</footer>
 
+								<!-- Modalnay huina -->
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+	    <div class="modal-content">
+
+	      <div class="modal-header">
+	        <h5 class="modal-title">Контракт верблядей.</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+			<div class="text-center">
+			  <img src="img/contract.jpg" alt="Контракт, Вербляди" title="Подписывай быстрей, сука">
+			</div>			
+	      <form action="send.php" method="post" target='_blank' onsubmit="return formValid(this)">
+	        <div class="modal-body">				
+	            <div class="form-group">
+	            	<label for="userName-text" class="col-form-label">Имя и фамилия:</label>
+		            <input type="text" name="userName" id="userName-text" class="form-control" placeholder="Или можно ссылку в вк" required>
+		        </div>
+	          <div class="form-row">
+		        <div class="form-group col-auto mb-0">
+		        	<label for="userLevel-text" class="col-form-label">Уровень:</label>		        	
+		        </div>		        
+		        <div class="form-group col-3 col-sm-2 mb-0">
+		          <input type="number" name="userLevel" id="userLevel-text" aria-describedby="userLevel-help" class="form-control" required>	          	
+	      		<div id="error-userLevel" class="invalid-feedback"></div>
+		        </div>
+		        <div class="mb-3">
+		          <small id="userLevel-help" class="form-text text-muted"><a href="#" onclick="testLevel()" class="nav-link" title="Вы будете направлены к тесту"><span class="icon-info"></span> Не знайте ваш уровень?</a></small>
+		        </div>
+		  	  </div>
+		      <div class="form-group">
+		      	<label for="emailText" class="col-form-label">Email:</label>
+	            <input type="email" name="email" id="emailText" class="form-control" placeholder="Если не вводили ссылку вк">
+	            <div id="error-email" class="invalid-feedback"></div>
+	          </div>
+	          <div class="form-group">
+	            <label for="message-text" class="col-form-label">Почему вы хотите быть с нами:</label>
+	            <textarea class="form-control" name="message" id="message-text" placeholder="Немного о себе" required></textarea>
+	            <div id="error-message" class="invalid-feedback"></div>
+	          </div>				        				
+	        </div>
+	        <div class="modal-footer">
+	            <div class="g-recaptcha mb-3" data-sitekey="6LecFVwUAAAAAJny68T70GaCeKzpeX7FVN4yILJl"></div>
+                <button type="submit" class="btn btn-success">Ебануть</button>
+	        </div>
+	      </form>
+
+	    </div>
+	  </div>
+	</div>
+
+
+	<div class="modal fade" id="refresh" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+	  	  <div class="modal-header">
+		    <h5 class="modal-title ml-auto">Список обновлений.</h5>
+		    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		      <span aria-hidden="true">&times;</span>
+		    </button>
+		  </div>
+		  <div class="modal-body">
+		  	<div>
+		  	  <ul class="list-update pl-4">
+		  	  	<li>10.04.18. Введен js в контракт, теперь его не наебать</li>
+		  	  	<li>11.04.18. Добавлена новая ссылка в футере на новую созданную страницу - "Список обновлений". С этого дня введется список новых внесений на сайт</li>
+		  	  	<li>12.04.18. Список обновлений был помещён в данное модальное окно, страница со списком обновлений была удалена.</li>
+		  	  </ul>
+		  	</div>
+		  	<div class="text-center">
+		  	  <img src="img/chudick.png" alt="Чудик">
+		  	</div>
+		  </div>
+		  <div class="modal-footer d-flex justify-content-center">
+		  	<button type="button" class="btn btn-danger" data-dismiss="modal">Я тебя понял братан</button>
+		  </div>
+	    
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade" id="report" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title ml-auto">Сообщить об ошибке.</h5>	        
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>	
+	      <!-- <form enctype="multipart/form-data" action="report.php" method="post" target='_blank'> -->
+	        <div class="modal-body">
+			  <div class="text-center pt-2">
+	       	    <p>Если вы обнаружили какую-нибудь ошибку (все что угодно, будь то грамматическая ошибка или неровное отображние   элемента), то сообщите пожалуйста об этом нам. Вы можете загрузить скриншот или описать ошибку по форме ниже, этим вы  внесете вклад в развитие сайта, от души.</p>
+				<img class="mr-3" src="img/darwin-min.png" alt="Абузьяна нитралируемый">				
+			  </div>
+					форма пока что не работает
+			  <div class="custom-file">
+				<input type="file" name="image" accept="image/x-png,image/gif,image/jpeg" disabled class="custom-file-input" id="customFile">
+				<label class="custom-file-label" for="customFile">Загрузить скриншот</label>
+			  </div>
+			  <div class="form-group">
+	            <label for="message-report-text" class="col-form-label">Опишите ошибку:</label>
+	            <textarea disabled class="form-control" name="message" id="message-report-text"></textarea>
+	          </div>
+		      <div class="form-group">
+		      	<label for="email-report-text" class="col-form-label">Email (Необязательно):</label>
+	            <input disabled type="email" name="email" id="email-report-text" class="form-control" placeholder="Чтобы получить отдушинку в карму">
+	          </div>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="submit" class="btn btn-success m-auto">Ебануть</button>	    	  
+	        </div>
+	      <!-- </form> -->
+	
+	    </div>
+	  </div>
+	</div>
 
 	<!-- Yandex.Metrika counter -->
 	<!-- <script>
@@ -298,6 +416,7 @@
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/contract.js"></script>
+		<script src='https://www.google.com/recaptcha/api.js?hl=ru'></script>
 
 		<script>
 		$(function(){
@@ -314,124 +433,6 @@
 		    });*/
 
 		</script>
-								<!-- Modalnay huina -->
-		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-		  <div class="modal-dialog modal-dialog-centered" role="document">
-		    <div class="modal-content">
 
-		      <div class="modal-header">
-		        <h5 class="modal-title">Контракт верблядей.</h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          <span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>
-				<div class="text-center">
-				  <img src="img/contract.jpg" alt="Контракт, Вербляди" title="Подписывай быстрей, сука">
-				</div>			
-		      <form action="send.php" method="post" target='_blank' onsubmit="return formValid(this)">
-		        <div class="modal-body">				
-		            <div class="form-group">
-		            	<label for="userName-text" class="col-form-label">Имя и фамилия:</label>
-			            <input type="text" name="userName" id="userName-text" class="form-control" placeholder="Или можно ссылку в вк" required>
-			        </div>
-		          <div class="form-row">
-			        <div class="form-group col-auto mb-0">
-			        	<label for="userLevel-text" class="col-form-label">Уровень:</label>		        	
-			        </div>		        
-			        <div class="form-group col-3 col-sm-2 mb-0">
-			          <input type="number" name="userLevel" id="userLevel-text" aria-describedby="userLevel-help" class="form-control" required>	          	
-		      		<div id="error-userLevel" class="invalid-feedback"></div>
-			        </div>
-			        <div class="mb-3">
-			          <small id="userLevel-help" class="form-text text-muted"><a href="#" onclick="testLevel()" class="nav-link" title="Вы будете направлены к тесту"><span class="icon-info"></span> Не знайте ваш уровень?</a></small>
-			        </div>
-			  	  </div>
-			      <div class="form-group">
-			      	<label for="emailText" class="col-form-label">Email:</label>
-		            <input type="email" name="email" id="emailText" class="form-control" placeholder="Если не вводили ссылку вк">
-		            <div id="error-email" class="invalid-feedback"></div>
-		          </div>
-		          <div class="form-group">
-		            <label for="message-text" class="col-form-label">Почему вы хотите быть с нами:</label>
-		            <textarea class="form-control" name="message" id="message-text" placeholder="Немного о себе" required></textarea>
-		            <div id="error-message" class="invalid-feedback"></div>
-		          </div>				        				
-		        </div>
-		        <div class="modal-footer">
-		          <button type="submit" class="btn btn-success m-auto">Ебануть</button>
-		        </div>
-		      </form>
-
-		    </div>
-		  </div>
-		</div>
-
-		<div class="modal fade" id="refresh" tabindex="-1" role="dialog" aria-hidden="true">
-		  <div class="modal-dialog modal-lg">
-		    <div class="modal-content">
-		  	  <div class="modal-header">
-			    <h5 class="modal-title ml-auto">Список обновлений.</h5>
-			    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			      <span aria-hidden="true">&times;</span>
-			    </button>
-			  </div>
-			  <div class="modal-body">
-			  	<div>
-			  	  <ul class="list-update pl-4">
-			  	  	<li>10.04.18. Введен js в контракт, теперь его не наебать</li>
-			  	  	<li>11.04.18. Добавлена новая ссылка в футере на новую созданную страницу - "Список обновлений". С этого дня введется список новых значительных внесений на сайт</li>
-			  	  	<li>12.04.18. Список обновлений был помещён в данное модальное окно, страница со списком обновлений была удалена.</li>
-			  	  	<li>24.04.18. В галерею было добавлено описание и панель с навигацией, пока он статичен, скоро будет адаптирован под моб. устройвста.</li>
-			  	  </ul>
-			  	</div>
-			  	<div class="text-center">
-			  	  <img src="img/chudick.png" alt="Чудик">
-			  	</div>
-			  </div>
-			  <div class="modal-footer d-flex justify-content-center">
-			  	<button type="button" class="btn btn-danger" data-dismiss="modal">Я тебя понял братан</button>
-			  </div>
-		    
-		    </div>
-		  </div>
-		</div>
-
-		<div class="modal fade" id="report" tabindex="-1" role="dialog" aria-hidden="true">
-		  <div class="modal-dialog modal-dialog-centered" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title ml-auto">Сообщить об ошибке.</h5>	        
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          <span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>	
-		      <!-- <form enctype="multipart/form-data" action="report.php" method="post" target='_blank'> -->
-		        <div class="modal-body">
-				  <div class="text-center pt-2">
-		       	    <p>Если вы обнаружили какую-нибудь ошибку (все что угодно, будь то грамматическая ошибка или неровное отображние   элемента), то сообщите пожалуйста об этом нам. Вы можете загрузить скриншот или описать ошибку по форме ниже, этим вы  внесете вклад в развитие сайта, от души.</p>
-					<img class="mr-3" src="img/darwin-min.png" alt="Абузьяна нитралируемый">				
-				  </div>
-						форма пока что не работает
-				  <div class="custom-file">
-					<input type="file" name="image" accept="image/x-png,image/gif,image/jpeg" disabled class="custom-file-input" id="customFile">
-					<label class="custom-file-label" for="customFile">Загрузить скриншот</label>
-				  </div>
-				  <div class="form-group">
-		            <label for="message-report-text" class="col-form-label">Опишите ошибку:</label>
-		            <textarea disabled class="form-control" name="message" id="message-report-text"></textarea>
-		          </div>
-			      <div class="form-group">
-			      	<label for="email-report-text" class="col-form-label">Email (Необязательно):</label>
-		            <input disabled type="email" name="email" id="email-report-text" class="form-control" placeholder="Чтобы получить отдушинку в карму">
-		          </div>
-		        </div>
-		        <div class="modal-footer">
-		          <button type="submit" class="btn btn-success m-auto">Ебануть</button>	    	  
-		        </div>
-		      <!-- </form> -->
-		
-		    </div>
-		  </div>
-		</div>
 	</body>
 </html>

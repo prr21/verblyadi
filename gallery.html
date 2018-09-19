@@ -13,8 +13,6 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/verblyadi.css">
 		<link rel="stylesheet" href="css/icon.css">
-		<link rel="stylesheet" href="css/slick.css">
-		<link rel="stylesheet" href="css/slick-theme.css">
 	
 		<!-- <script src="//vk.com/js/api/openapi.js?152"></script> -->
 
@@ -39,10 +37,10 @@
 				
 					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				  	  <div class="navbar-nav">
-				    	<a class="nav-item nav-link" href="https://verblyadi.000webhostapp.com/">Главная <span class="sr-only">(current)</span></a>
-				    	<a class="nav-item nav-link active" href="gallery.html">галерея</a>
-				    	<a class="nav-item nav-link" href="#">Prr</a>
-				    	<a class="nav-item nav-link" href="#">Prrr</a>
+				    	<a class="nav-item nav-link" href="https://verblyadi.000webhostapp.com/">Главная</a>
+				    	<a class="nav-item nav-link active" href="#">галерея</a>
+				    	<a class="nav-item nav-link" href="dictionary.html">словарь</a>
+				    	<a class="nav-item nav-link" href="test.html">prrr</a>
 				      </div>
 				  	</div>									  	
 
@@ -75,13 +73,13 @@
   	<div class="galery container-wrap d-lg-flex">
   		<div class="col-lg-2">
   		  <div class="nav-tablist">
-		    <div class="mb-2">
-		  	  <button class="navbar-toggler navbar-light d-lg-none" type="button" data-toggle="collapse" data-target="#navbarTablist" aria-controls="navbarTablist" aria-expanded="false" aria-label="Toggle tab">
+		    <div class="mb-2 d-lg-none">
+		  	  <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarTablist" aria-controls="navbarTablist" aria-expanded="true" aria-label="Toggle tab">
 			  <span class="navbar-toggler-icon"></span>
 			  <span id="currentGroup">Выберите категорию</span>
 			  </button>			
 		    </div>
-		    <div class="mb-2 collapse" id="navbarTablist"> <!-- На 5 пикселей влево, изза отсутствие лайст-чайлда -->
+		    <div class="mb-2 collapse show" id="navbarTablist"> <!-- На 5 пикселей влево, изза отсутствие лайст-чайлда -->
 		      <div class="list-group" role="tablist"> <!-- И сделать стики  -->
 		        <a class="list-group-item list-group-item-action active" id="list-photo-list" data-toggle="list" href="#list-photo" role="tab">Фотоматериалы</a>
 		        <a class="list-group-item list-group-item-action" id="list-audio-list" data-toggle="list" href="#list-audio" role="tab">Аудиматериалы</a>
@@ -194,7 +192,7 @@
 
 		
 
-	<!-- <div class="container">
+	<div class="container">
 	  <div class="container-wrap row d-flex justify-content-center">
 		<div class="vk-comments col-12 col-lg-10 p-0">
 		  <div id="vk_comments"></div>
@@ -206,7 +204,7 @@
 		  </script>
 		</div>
 	  </div> 
-	</div> -->
+	</div>
 
 	<footer class="container-fluid bg-secondary">
 	  <div class="text-center text-light">
@@ -272,110 +270,17 @@
 	    })(document, window, "yandex_metrika_callbacks");
 	</script>
 	<noscript><div><img src="https://mc.yandex.ru/watch/48313265" style="position:absolute; left:-9999px;" alt="" /></div></noscript>  -->
-	<!-- /Yandex.Metrika counter -->	
+	<!-- /Yandex.Metrika counter	 -->
 		
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="js/jquery-3.2.1.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/slick.min.js"></script>
 
 		<script>
 
-		jQuery(function(f){
-		    /*var element = f('#prr');
-		    f(window).scroll(function(){
-		        element['fade'+ (f(this).scrollTop() == 0 || f(this).scrollTop() > 520 ? 'In' : 'Out')](210);
-		    });
-
-			$('#prr').on('click', function () {
-		        $('html,body').animate({
-		            scrollTop: 530
-		        }, 100);
-		    });*/
-		});
-
-	    $(document).ready(function(){
-	      $('.sl').slick({});
-	    });
-
-
-
-		/*$('.list-group').text(function() {
-		  // this указывает на конкретный элемент, 
-		  // на котором только что произошло событие 'change'
-		  var text = $('.list-group .active').text();
-		  $('#currentGroup').text(text);
-		});*/
-
 	  </script>
-	<div class="modal fade" id="refresh" tabindex="-1" role="dialog" aria-hidden="true">
-	  <div class="modal-dialog modal-lg">
-	    <div class="modal-content">
-	  	  <div class="modal-header">
-		    <h5 class="modal-title ml-auto">Список обновлений.</h5>
-		    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		      <span aria-hidden="true">&times;</span>
-		    </button>
-		  </div>
-		  <div class="modal-body">
-		  	<div>
-		  	  <ul id="updates" class="list-update pl-4">
-		  	  	<li>10.04.18. Введен js в контракт, теперь его не наебать</li>
-		  	  	<li>11.04.18. Добавлена новая ссылка в футере на новую созданную страницу - "Список обновлений". С этого дня введется список новых значительных внесений на сайт</li>
-		  	  	<li>12.04.18. Список обновлений был помещён в данное модальное окно, страница со списком обновлений была удалена.</li>
-		  	  	<li>24.04.18. В галерею было добавлено описание и панель с навигацией, пока он статичен, скоро будет адаптирован под моб. устройвста.</li>
-		  	  </ul>
-		  	</div>
-		  	<div class="text-center">
-		  	  <img src="img/chudick.png" alt="Чудик">
-		  	</div>
-		  </div>
-		  <div class="modal-footer d-flex justify-content-center">
-		  	<button type="button" class="btn btn-danger" data-dismiss="modal">Я тебя понял братан</button>
-		  </div>
-	    
-	    </div>
-	  </div>
-	</div>
 
-		<div class="modal fade" id="report" tabindex="-1" role="dialog" aria-hidden="true">
-		  <div class="modal-dialog modal-dialog-centered" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title ml-auto">Сообщить об ошибке.</h5>	        
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          <span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>	
-		      <!-- <form enctype="multipart/form-data" action="report.php" method="post" target='_blank'> -->
-		        <div class="modal-body">
-				  <div class="text-center pt-2">
-		       	    <p>Если вы обнаружили какую-нибудь ошибку (все что угодно, будь то грамматическая ошибка или неровное отображние   элемента), то сообщите пожалуйста об этом нам. Вы можете загрузить скриншот или описать ошибку по форме ниже, этим вы  внесете вклад в развитие сайта, от души.</p>
-					<img class="mr-3" src="img/darwin-min.png" alt="Абузьяна нитралируемый">				
-				  </div>
-						форма пока что не работает
-				  <div class="custom-file">
-					<input type="file" name="image" accept="image/x-png,image/gif,image/jpeg" disabled class="custom-file-input" id="customFile">
-					<label class="custom-file-label" for="customFile">Загрузить скриншот</label>
-				  </div>
-				  <div class="form-group">
-		            <label for="message-report-text" class="col-form-label">Опишите ошибку:</label>
-		            <textarea disabled class="form-control" name="message" id="message-report-text"></textarea>
-		          </div>
-			      <div class="form-group">
-			      	<label for="email-report-text" class="col-form-label">Email (Необязательно):</label>
-		            <input disabled type="email" name="email" id="email-report-text" class="form-control" placeholder="Чтобы получить отдушинку в карму">
-		          </div>
-		        </div>
-		        <div class="modal-footer">
-		          <button type="submit" class="btn btn-success m-auto">Ебануть</button>	    	  
-		        </div>
-		      <!-- </form> -->
-		
-		    </div>
-		  </div>
-		</div>
 	</body>
 </html>
