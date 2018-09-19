@@ -1,3 +1,5 @@
+'use strict'
+// Валидация формы, которую нужно будет переписать.
 function formValid(form) {
 
 	fail  = validName(form.userName.value)
@@ -125,3 +127,27 @@ function validMessage(prr) {
 	alert(  dateNow );
 };
 */
+
+// Всё что выше переписать, ниже - поиск лальных слов
+
+window.onload = function toFindLal(){
+	const LALS_WORDS = ['лаль', 'прр']; //массив лалей
+	var start = new Date;
+	var p = document.getElementsByTagName('p');
+
+	 for(let i = 0; i < p.length; i++){
+		var currentP = p[i].innerHTML; //
+
+		for(let j = 0; j < LALS_WORDS.length; j++){
+			let numLal = currentP.indexOf(LALS_WORDS[j]) //Е! не будетищет другой регистр
+
+			if(numLal != -1){
+				let currentLal = LALS_WORDS[j];
+				currentP = currentP.replace(RegExp(currentLal,'g'),`<a class="lal-word"
+				title='Узнать обозначение: "${currentLal}"' href="file:///C:/Users/Prr/Desktop/++prrr/grubo/Verblyadi2/dictionary.html#${currentLal}">${currentLal}</a>`);
+				p[i].innerHTML = currentP; //Е! каждый раз новый текст идет в иннер,
+									   // из-за этого не ищет слова в верхнем регистре, вставляется все с маленькой
+			}											//https://verblyadi.000webhostapp.com/dictionary.html вместо статичн
+		}
+	}
+}
