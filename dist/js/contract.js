@@ -131,23 +131,27 @@ function validMessage(prr) {
 // Всё что выше переписать, ниже - поиск лальных слов
 
 window.onload = function toFindLal(){
-	const LALS_WORDS = ['лаль', 'прр']; //массив лалей
 	var start = new Date;
+	const LALS_WORDS = ['лаль', 'прр', 'панта']; //массив лалей
 	var p = document.getElementsByTagName('p');
 
 	 for(let i = 0; i < p.length; i++){
-		var currentP = p[i].innerHTML; //
+		let currentP = p[i].innerHTML;
 
 		for(let j = 0; j < LALS_WORDS.length; j++){
-			let numLal = currentP.indexOf(LALS_WORDS[j]) //Е! не будетищет другой регистр
+			let currentLal = LALS_WORDS[j];
+			let distanceAtLal = currentP.toLowerCase().indexOf(currentLal)
 
-			if(numLal != -1){
-				let currentLal = LALS_WORDS[j];
-				currentP = currentP.replace(RegExp(currentLal,'g'),`<a class="lal-word"
-				title='Узнать обозначение: "${currentLal}"' href="file:///C:/Users/Prr/Desktop/++prrr/grubo/Verblyadi2/dictionary.html#${currentLal}">${currentLal}</a>`);
-				p[i].innerHTML = currentP; //Е! каждый раз новый текст идет в иннер,
-									   // из-за этого не ищет слова в верхнем регистре, вставляется все с маленькой
-			}											//https://verblyadi.000webhostapp.com/dictionary.html вместо статичн
+			if(distanceAtLal != -1){
+				currentLal = currentP.slice(distanceAtLal, currentLal.length + distanceAtLal)
+
+				currentP = currentP.replace(RegExp(currentLal,'gi'),`<a class="lal-word"
+				title='Узнать обозначение: "${currentLal}"'
+				href="file:///C:/Users/Prr/Desktop/++prrr/grubo/Verblyadi2/dist/dictionary.html#${currentLal}">${currentLal}</a>`);
+				//https://verblyadi.000webhostapp.com/dictionary.html вместо статичной ссылки
+				p[i].innerHTML = currentP;
+			}
 		}
 	}
+	console.log(new Date - start +' ms')
 }
