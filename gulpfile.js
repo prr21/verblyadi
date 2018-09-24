@@ -70,7 +70,7 @@ gulp.task('watch',['browser-sync', 'css-libs' ,'scripts'] ,function() {
 	gulp.watch('app/js/*.js', browserSync.reload);
 })
 
-gulp.task('build',['clean','img','scripts'] ,function() {
+gulp.task('build',['clean','img','scripts', 'css-libs'] ,function() {
 	var buildCss = gulp.src(['app/css/verblyadi.min.css', 'app/css/bootstrap.min.css', 'app/css/icon.css'])
 	.pipe(gulp.dest('dist/css'));
 
