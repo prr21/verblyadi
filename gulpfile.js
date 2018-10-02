@@ -11,13 +11,6 @@ var gulp = require('gulp'),
 	cache = require('gulp-cache');
 
 
-// gulp.task('sass', function() {
-// 	return gulp.src('app/sass/*.sass')
-// 	.pipe(sass())
-// 	.pipe(gulp.dest('app/sass'))
-// 	.pipe(browserSync.reload({stream: true}))
-// })
-
 gulp.task('browser-sync', function() {
 	browserSync({
 		server: {
@@ -26,6 +19,13 @@ gulp.task('browser-sync', function() {
 		notify: false
 	})
 });
+
+gulp.task('sass', function() {
+	return gulp.src('app/sass/*.sass')
+	.pipe(sass())
+	.pipe(gulp.dest('app/css'))
+	.pipe(browserSync.reload({stream: true}))
+})
 
 gulp.task('scripts', function() {
 	return gulp.src([
@@ -63,14 +63,14 @@ gulp.task('img', function() {
 	.pipe(gulp.dest('dist/img'))
 })
 
-gulp.task('watch',['browser-sync', 'css-libs' ,'scripts'] ,function() {
-	// gulp.watch('app/sass/*.sass', ['sass']);
+gulp.task('watch',['browser-sync', 'sass', 'css-libs','scripts'] ,function() {
+	gulp.watch('app/sass/*.sass', ['sass', 'css-libs', browserSync.reload]);
 	gulp.watch('app/*.html', browserSync.reload);
-	gulp.watch('app/css/*.css', browserSync.reload);
+	gulp.watch('app/css/*.css', ['css-libs', browserSync.reload]);
 	gulp.watch('app/js/*.js', browserSync.reload);
 })
 
-gulp.task('build',['clean','img','scripts', 'css-libs'] ,function() {
+gulp.task('build',['clean','img','scripts', 'sass', 'css-libs'] ,function() {
 	var buildCss = gulp.src(['app/css/verblyadi.min.css', 'app/css/bootstrap.min.css', 'app/css/icon.css'])
 	.pipe(gulp.dest('dist/css'));
 
