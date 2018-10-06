@@ -40,7 +40,7 @@
 				  	  <div class="navbar-nav">
 				    	<a class="nav-item nav-link active" href="#">главная</a>
 				    	<a class="nav-item nav-link" href="gallery.html">галерея</a>
-				    	<a class="nav-item nav-link" href="dictionary.html">Словарь</a>
+				    	<a class="nav-item nav-link" href="dictionary.html">словарь</a>
 				    	<a class="nav-item nav-link" href="test.html">prrr</a>
 				      </div>
 				  	</div>									  	
@@ -177,7 +177,7 @@
 			  	  </div>
 
 				  <div class="description">
-			   		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ipsa id odio a vero perspiciatis error лаль voluptatem voluptatibus necessitatibus iusto sed doloremque corporis ducimus, dolore, numquam eius ad suscipit прр quam veniam, atque exercitationem, illum veritatis laudantium illo! Quas, reiciendis, aspernatur.</p>
+			   		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ipsa id odio a vero perspЛалЬiciatis error voluptatem voluptatibus necessitatib лаль us  iusto sed doloremque corporis ducim пррррр us, dolore, ПРР numquam eius ad suscipit quam veniam, atque exercitationem, illum veritatis laudantium illo! Quas, reiciendis, aspernatur.</p>
 			   	  </div>
 			   	</div>
 
@@ -198,9 +198,10 @@
 			  <div class="p-2 pb-0 text-center">
 				<p>Сайт постепенно будет расти как впрочем и сама организация. Будут вноситься новые разделы со страничками с прикольной хуйней.</p>
 				<p>Если вы заинтересовались и хотите быть частью нашей большой и ебанутой команды, то перейдите по кнопке к контракту и подпишите его.</p>
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Перейти к контракту</button>
+				<button id='contract-btn' type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Перейти к контракту</button>
 			  </div>
 			</div>
+			<div id="result"></div>
 
 		  </div>
 		</section>
@@ -211,12 +212,12 @@
 	  <div class="container-wrap row d-flex justify-content-center">
 		<div class="vk-comments col-12 col-lg-10 p-0">
 		  <div id="vk_comments"></div>
-		  <script>
+		  <!-- <script>
 		  	window.onload = function () {
 		  	VK.init({apiId: 6433646, onlyWidgets: true});
 			VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*", pageUrl: "https://verblyadi.000webhostapp.com"} );
 			}
-		  </script>
+		  </script> -->
 		</div>
 	  </div> 
 	</div>
@@ -256,58 +257,6 @@
 	</footer>
 
 								<!-- Modalnay huina -->
-	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-	  <div class="modal-dialog modal-dialog-centered" role="document">
-	    <div class="modal-content">
-
-	      <div class="modal-header">
-	        <h5 class="modal-title">Контракт верблядей.</h5>
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
-	        </button>
-	      </div>
-			<div class="text-center">
-			  <img src="img/contract.jpg" alt="Контракт, Вербляди" title="Подписывай быстрей, сука">
-			</div>			
-	      <form action="send.php" method="post" target='_blank' onsubmit="return formValid(this)">
-	        <div class="modal-body">				
-	            <div class="form-group">
-	            	<label for="userName-text" class="col-form-label">Имя и фамилия:</label>
-		            <input type="text" name="userName" id="userName-text" class="form-control" placeholder="Или можно ссылку в вк" required>
-		        </div>
-	          <div class="form-row">
-		        <div class="form-group col-auto mb-0">
-		        	<label for="userLevel-text" class="col-form-label">Уровень:</label>		        	
-		        </div>		        
-		        <div class="form-group col-3 col-sm-2 mb-0">
-		          <input type="number" name="userLevel" id="userLevel-text" aria-describedby="userLevel-help" class="form-control" required>	          	
-	      		<div id="error-userLevel" class="invalid-feedback"></div>
-		        </div>
-		        <div class="mb-3">
-		          <small id="userLevel-help" class="form-text text-muted"><a href="#" onclick="testLevel()" class="nav-link" title="Вы будете направлены к тесту"><span class="icon-info"></span> Не знайте ваш уровень?</a></small>
-		        </div>
-		  	  </div>
-		      <div class="form-group">
-		      	<label for="emailText" class="col-form-label">Email:</label>
-	            <input type="email" name="email" id="emailText" class="form-control" placeholder="Если не вводили ссылку вк">
-	            <div id="error-email" class="invalid-feedback"></div>
-	          </div>
-	          <div class="form-group">
-	            <label for="message-text" class="col-form-label">Почему вы хотите быть с нами:</label>
-	            <textarea class="form-control" name="message" id="message-text" placeholder="Немного о себе" required></textarea>
-	            <div id="error-message" class="invalid-feedback"></div>
-	          </div>				        				
-	        </div>
-	        <div class="modal-footer">
-	            <div class="g-recaptcha mb-3" data-sitekey="6LecFVwUAAAAAJny68T70GaCeKzpeX7FVN4yILJl"></div>
-                <button type="submit" class="btn btn-success">Ебануть</button>
-	        </div>
-	      </form>
-
-	    </div>
-	  </div>
-	</div>
-
 
 	<div class="modal fade" id="refresh" tabindex="-1" role="dialog" aria-hidden="true">
 	  <div class="modal-dialog modal-lg">
@@ -410,11 +359,11 @@
 						
 		
 		<!-- Optional JavaScript -->
-		<script src="js/libs.min.js"></script>
+		<!-- <script src="js/libs.min.js"></script> -->
 		<script src="js/contract.js"></script>
-		<script src='https://www.google.com/recaptcha/api.js?hl=ru'></script>
+		<!-- <script src='https://www.google.com/recaptcha/api.js?hl=ru'></script> -->
 
-		<script>
+		<!-- <script>
 		$(function(){
 			var element = $('#prr');
 			$(window).scroll(function(){
@@ -422,13 +371,27 @@
 			});
 
 		});
+
 			/*$('#prr').on('click', function () {
 		        $('html,body').animate({
 		            scrollTop: 530
 		        }, 100);
 		    });*/
 
-		</script>
+		</script> -->
+		<!-- <script>
+		$(function(){
+			$('#contract-btn').click(function(){
+				$.ajax({
+					type: "POST",
+					url: 'backend/mobadl.php',
+					success: function(data) {
+					           $('#result').html(data);
+					}
+				});
+			});
+		});
+		</script>	 -->	
 
 	</body>
 </html>
