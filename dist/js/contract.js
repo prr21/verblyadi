@@ -132,23 +132,18 @@ function validMessage(prr) {
 
 window.onload = function toFindLal(){
 	var start = new Date;
-	const LALS_WORDS = ['лаль', 'прр', 'панта']; //массив лалей
+	var LALS_WORDS = ['лаль',/прр*р/,'метуса']			//массив лалей
 	var p = document.getElementsByTagName('p');
 
 	 for(let i = 0; i < p.length; i++){
 		let currentP = p[i].innerHTML;
 
-		for(let j = 0; j < LALS_WORDS.length; j++){
-			let currentLal = LALS_WORDS[j];
-			let distanceAtLal = currentP.toLowerCase().indexOf(currentLal)
+		for (let j = 0; j < LALS_WORDS.length; j++) {
+			let curLal = currentP.match(RegExp(LALS_WORDS[j],'i'));
 
-			if(distanceAtLal != -1){
-				currentLal = currentP.slice(distanceAtLal, currentLal.length + distanceAtLal)
-
-				currentP = currentP.replace(RegExp(currentLal,'gi'),`<a class="lal-word"
-				title='Узнать обозначение: "${currentLal}"'
-				href="file:///C:/Users/Prr/Desktop/++prrr/grubo/Verblyadi2/dist/dictionary.html#${currentLal}">${currentLal}</a>`);
-				//https://verblyadi.000webhostapp.com/dictionary.html вместо статичной ссылки
+			if(curLal != null){
+				let newLal = `<a class="lal-word" title='Узнать обозначение: "${curLal}"' href="https://verblyadi.000webhostapp.com/dictionary.html#${LALS_WORDS[j]}">${curLal}</a>`
+				currentP = currentP.replace(RegExp(curLal), newLal);
 				p[i].innerHTML = currentP;
 			}
 		}
