@@ -13,15 +13,12 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/verblyadi.min.css">
 		<link rel="stylesheet" href="css/icon.css">
-	
-		<!-- <script src="//vk.com/js/api/openapi.js?152"></script> -->
 
 	</head>
 	<body>
-
 		<header class="background-header-index img-fluid">
 
-		  <div id="prr" class="col-12 nav-header p-0">
+		  <div id="prr" title="Наверх" class="col-12 nav-header p-0">
 			<div class="d-flex justify-content-between justify-content-lg-around navbar-light frrr">
 
 		   	  <div class="col-auto">
@@ -198,10 +195,9 @@
 			  <div class="p-2 pb-0 text-center">
 				<p>Сайт постепенно будет расти как впрочем и сама организация. Будут вноситься новые разделы со страничками с прикольной хуйней.</p>
 				<p>Если вы заинтересовались и хотите быть частью нашей большой и ебанутой команды, то перейдите по кнопке к контракту и подпишите его.</p>
-				<button id='contract-btn' type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Перейти к контракту</button>
+				<button type="button" class="btn btn-primary modal-btn" data-toggle="modal" data-target="#formForJob">Перейти к контракту</button>
 			  </div>
 			</div>
-			<div id="result"></div>
 
 		  </div>
 		</section>
@@ -209,17 +205,13 @@
 	</div>
 
 	<div class="container">
+
 	  <div class="container-wrap row d-flex justify-content-center">
 		<div class="vk-comments col-12 col-lg-10 p-0">
 		  <div id="vk_comments"></div>
-		  <!-- <script>
-		  	window.onload = function () {
-		  	VK.init({apiId: 6433646, onlyWidgets: true});
-			VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*", pageUrl: "https://verblyadi.000webhostapp.com"} );
-			}
-		  </script> -->
-		</div>
+	  	</div>
 	  </div> 
+
 	</div>
 
 	<footer class="container-fluid bg-secondary">
@@ -240,93 +232,21 @@
 		</div>
 
 		<div class="d-sm-flex justify-content-sm-around flex-sm-row-reverse">
-
 		  <div class="d-flex justify-content-center my-4 my-sm-0">
-		  	<a data-toggle="modal" data-target="#refresh" href="#" class="footer-list mr-4">Список обновлений</a>
-		  	
-			<a class="footer-list" data-toggle="modal" data-target="#report" href="#">Сообщить об ошибке</a>
+		  	<a class="footer-list mr-4 modal-btn" data-toggle="modal" data-target="#refresh" href="#">Список обновлений</a>
+			<a class="footer-list modal-btn" data-toggle="modal" data-target="#report" href="#">Сообщить об ошибке</a>
 		  </div>
 
 		  <div class="align-items-center pt-2">
 			<p class="small">&copy; 2018 <span><a target="_blank" class="footer-brand" href="https://libidoguru.ru/wp-content/uploads/2017/10/foto11.jpg">Вербляди</a></span>. Bсе права защищены, если нет, то мне похуй</p>
 		  </div>
-
 		</div>
 
 	  </div>
 	</footer>
 
-								<!-- Modalnay huina -->
-
-	<div class="modal fade" id="refresh" tabindex="-1" role="dialog" aria-hidden="true">
-	  <div class="modal-dialog modal-lg">
-	    <div class="modal-content">
-	  	  <div class="modal-header">
-		    <h5 class="modal-title ml-auto">Список обновлений.</h5>
-		    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		      <span aria-hidden="true">&times;</span>
-		    </button>
-		  </div>
-		  <div class="modal-body">
-		  	<div>
-		  	  <ul class="list-update pl-4">
-		  	  	<li>10.04.18. Введен js в контракт, теперь его не наебать</li>
-		  	  	<li>11.04.18. Добавлена новая ссылка в футере на новую созданную страницу - "Список обновлений". С этого дня введется список новых внесений на сайт</li>
-		  	  	<li>12.04.18. Список обновлений был помещён в данное модальное окно, страница со списком обновлений была удалена.</li>
-		  	  </ul>
-		  	</div>
-		  	<div class="text-center">
-		  	  <img src="img/chudick.png" alt="Чудик">
-		  	</div>
-		  </div>
-		  <div class="modal-footer d-flex justify-content-center">
-		  	<button type="button" class="btn btn-danger" data-dismiss="modal">Я тебя понял братан</button>
-		  </div>
-	    
-	    </div>
-	  </div>
-	</div>
-
-	<div class="modal fade" id="report" tabindex="-1" role="dialog" aria-hidden="true">
-	  <div class="modal-dialog modal-dialog-centered" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title ml-auto">Сообщить об ошибке.</h5>	        
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
-	        </button>
-	      </div>	
-	      <!-- <form enctype="multipart/form-data" action="report.php" method="post" target='_blank'> -->
-	        <div class="modal-body">
-			  <div class="text-center pt-2">
-	       	    <p>Если вы обнаружили какую-нибудь ошибку (все что угодно, будь то грамматическая ошибка или неровное отображние   элемента), то сообщите пожалуйста об этом нам. Вы можете загрузить скриншот или описать ошибку по форме ниже, этим вы  внесете вклад в развитие сайта, от души.</p>
-				<img class="mr-3" src="img/darwin-min.png" alt="Абузьяна нитралируемый">				
-			  </div>
-					форма пока что не работает
-			  <div class="custom-file">
-				<input type="file" name="image" accept="image/x-png,image/gif,image/jpeg" disabled class="custom-file-input" id="customFile">
-				<label class="custom-file-label" for="customFile">Загрузить скриншот</label>
-			  </div>
-			  <div class="form-group">
-	            <label for="message-report-text" class="col-form-label">Опишите ошибку:</label>
-	            <textarea disabled class="form-control" name="message" id="message-report-text"></textarea>
-	          </div>
-		      <div class="form-group">
-		      	<label for="email-report-text" class="col-form-label">Email (Необязательно):</label>
-	            <input disabled type="email" name="email" id="email-report-text" class="form-control" placeholder="Чтобы получить отдушинку в карму">
-	          </div>
-	        </div>
-	        <div class="modal-footer">
-	          <button type="submit" class="btn btn-success m-auto">Ебануть</button>	    	  
-	        </div>
-	      <!-- </form> -->
-	
-	    </div>
-	  </div>
-	</div>
-
 	<!-- Yandex.Metrika counter -->
-	<!-- <script>
+	<script>
 	    (function (d, w, c) {
 	        (w[c] = w[c] || []).push(function() {
 	            try {
@@ -352,46 +272,52 @@
 	        } else { f(); }
 	    })(document, window, "yandex_metrika_callbacks");
 	</script>
-	<noscript><div><img src="https://mc.yandex.ru/watch/48313265" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
+	<noscript><div><img src="https://mc.yandex.ru/watch/48313265" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 	<!-- /Yandex.Metrika counter -->	
 
 
 						
 		
 		<!-- Optional JavaScript -->
-		<!-- <script src="js/libs.min.js"></script> -->
+		<script src="js/libs.min.js"></script>
 		<script src="js/contract.js"></script>
-		<!-- <script src='https://www.google.com/recaptcha/api.js?hl=ru'></script> -->
+		<script src="https://vk.com/js/api/openapi.js?159"></script>
+		<script src='https://www.google.com/recaptcha/api.js?hl=ru'></script>
+		
+		<script>VK.init({apiId: 6730916, onlyWidgets: true});</script>
+		<script>
+			let showed = false,
+				lastScroll;
 
-		<!-- <script>
-		$(function(){
-			var element = $('#prr');
-			$(window).scroll(function(){
-				element['slide' + ($(this).scrollTop() == 0 || $(this).scrollTop() > 530 ? 'Down' : 'Up')](450);
-			});
+			$(window).scroll(function() {
+				let winScroll = $(this).scrollTop();
 
-		});
+				$('#prr')['slide' + (winScroll == 0 || winScroll > 530 ? 'Down' : 'Up')](250)
 
-			/*$('#prr').on('click', function () {
-		        $('html,body').animate({
-		            scrollTop: 530
-		        }, 100);
-		    });*/
-
-		</script> -->
-		<!-- <script>
-		$(function(){
-			$('#contract-btn').click(function(){
-				$.ajax({
-					type: "POST",
-					url: 'backend/mobadl.php',
-					success: function(data) {
-					           $('#result').html(data);
+				if (!showed) {
+					if (winScroll > $('#vk_comments').offset().top - 600) {
+						VK.Widgets.Comments("vk_comments", {
+							limit: 10, attach: "*", pageUrl: "https://verblyadi.000webhostap.com"
+						});
+				  		showed = true;
 					}
-				});
+				}
 			});
-		});
-		</script>	 -->	
 
+			$('#prr').on('click', function() {
+				let height = 0;
+
+				if ($(window).scrollTop() < 20) {
+					$('#prr').attr('title', 'Наверх');
+					height = lastScroll;
+				}else {
+					lastScroll = $(window).scrollTop();$('#prr').attr('title', 'Обратно');
+				}
+
+				$('html,body').animate({
+	           		scrollTop: height
+	        	}, 100);
+		    });
+		</script>
 	</body>
 </html>

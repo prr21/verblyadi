@@ -13,8 +13,6 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/verblyadi.min.css">
 		<link rel="stylesheet" href="css/icon.css">
-	
-		<!-- <script src="//vk.com/js/api/openapi.js?152"></script> -->
 
 	</head>
 	<body>
@@ -193,17 +191,13 @@
 		
 
 	<div class="container">
+
 	  <div class="container-wrap row d-flex justify-content-center">
 		<div class="vk-comments col-12 col-lg-10 p-0">
 		  <div id="vk_comments"></div>
-		  <script>
-		  	window.onload = function () {
-		  	VK.init({apiId: 6433646, onlyWidgets: true});
-			VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*", pageUrl: "https://verblyadi.000webhostapp.com"} );
-			}
-		  </script>
-		</div>
+	  	</div>
 	  </div> 
+
 	</div>
 
 	<footer class="container-fluid bg-secondary">
@@ -275,10 +269,48 @@
 		<!-- Optional JavaScript -->
 		<script src="js/libs.min.js"></script>
 		<script src="js/contract.js"></script>
-
+		<script src="https://vk.com/js/api/openapi.js?159"></script>
+		
+		<script>VK.init({apiId: 6730916, onlyWidgets: true});</script>
 		<script>
+		  var comments = function () {
+		  	VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*", pageUrl: "https://verblyadi.000webhostap.com"});
+		  }
+		</script>		
+		<script>
+			let showed = false,
+				lastScroll;
 
-	  </script>
+			$(window).scroll(function() {
+				let winScroll = $(this).scrollTop();
+
+				$('#prr')['slide' + (winScroll == 0 || winScroll > 530 ? 'Down' : 'Up')](250)
+
+				if (!showed) {
+					if (winScroll > $('#vk_comments').offset().top - 600) {
+						VK.Widgets.Comments("vk_comments", {
+							limit: 10, attach: "*", pageUrl: "https://verblyadi.000webhostap.com"
+						});
+				  		showed = true;
+					}
+				}
+			});
+
+			$('#prr').on('click', function() {
+				let height = 0;
+
+				if ($(window).scrollTop() < 20) {
+					$('#prr').attr('title', 'Наверх');
+					height = lastScroll;
+				}else {
+					lastScroll = $(window).scrollTop();$('#prr').attr('title', 'Обратно');
+				}
+
+				$('html,body').animate({
+	           		scrollTop: height
+	        	}, 100);
+		    });
+		</script>
 
 	</body>
 </html>
