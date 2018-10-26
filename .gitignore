@@ -4,4 +4,4 @@ node_modules/
 app/
 *.json
 dist/img/
-dist/img/
+dist/fonts/
