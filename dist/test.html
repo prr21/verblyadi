@@ -81,6 +81,9 @@
 				  <a class="nav-link footer-list" target="_blank" href="https://www.instagram.com/erboff/"><span class="icon-instagram"></span></a>
 				</li>
 				<li class="nav-item">
+				  <a class="nav-link footer-list" target="_blank" href="https://github.com/prr21/verblyadi"><span class="icon-github"></span></a>
+				</li>
+				<li class="nav-item">
 				  <a class="nav-link footer-list" target="_blank" href="https://twitter.com/Erboff"><span class="icon-twitter"></span></a>
 				</li>
 			  </ul>
@@ -168,7 +171,7 @@
 	        	}, 100);
 	        }});
 		</script>
-		<script >
+		<script>
 			var modal = document.getElementsByClassName('modal-btn'),
 				placeForModal = document.getElementById('placeForModal');
 
@@ -181,7 +184,8 @@
 					success: function(data){
 						let div = document.createElement('div');
 					    div.innerHTML = data;
-					    placeForModal.appendChild(div)
+					    placeForModal.appendChild(div);
+					    if (modalTarget == 'refresh') markNewUpdates();
 					}
 				});
 			};
