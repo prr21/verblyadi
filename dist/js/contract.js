@@ -1,4 +1,6 @@
 'use strict'
+window.onload = toFindLal();
+
 // Валидация формы, которую нужно будет переписать.
 function formValid(form) {
 
@@ -127,12 +129,13 @@ function validMessage(prr) {
 	alert(  dateNow );
 };
 */
+// Всё что выше переписать 
 
-// Всё что выше переписать, ниже - поиск лальных слов
 
-window.onload = function toFindLal(){
-	var start = new Date;
-	var LALS_WORDS = ['лаль',/прр*р/,'метуса']			//массив лалей
+
+// Поиск лальных слов
+function toFindLal(){
+	var LALS_WORDS = ['лаль',/прр*р/]			//массив лалей
 	var p = document.getElementsByTagName('p');
 
 	 for(let i = 0; i < p.length; i++){
@@ -148,5 +151,23 @@ window.onload = function toFindLal(){
 			}
 		}
 	}
-	console.log(new Date - start +' ms')
+};
+
+// Выделить последнее обновление в refresh
+function markNewUpdates() {
+	var refresh = document.getElementById('refresh'),
+		datePublic = refresh.getElementsByClassName('date-public');
+
+	for (let i = 0; i < datePublic.length; i++) {
+		let date = (datePublic[i].textContent).split('.'),
+			dateParent = datePublic[i].parentNode;
+
+		[date[0], date[1]] = [date[1], date[0]];
+		date = new Date(date);
+
+		let difDays = (new Date() - date) / 86400000; //столько ms в сутках
+
+		if (difDays < 5) dateParent.classList.add('new');
+		else break;
+	}
 }
