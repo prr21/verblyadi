@@ -69,12 +69,12 @@
 	  	</section>
 		<div class="row">
 			<div class="d-flex align-center justify-content-center col-auto">
-				<ol class="list-group-lal list-group list-none" role="tablist">
-					<li class="list-group-item-lal list-group-item-action" id="лаль" data-toggle="list" href="#word-лаль" role="tab"><a>Лаль</a></li>
-					<li class="list-group-item-lal list-group-item-action" id="прр" data-toggle="list" href="#word-прр" role="tab"><a>Прр</a></li>
-					<li class="list-group-item-lal list-group-item-action" id="панта" data-toggle="list" href="#word-панта" role="tab"><a>Панта</a></li>
-					<li class="list-group-item-lal list-group-item-action" id="метуса" data-toggle="list" href="#word-метуса" role="tab"><a>метуса</a></li>
-				</ol>
+				<div class="list-group-lal list-group list-none" role="tablist">
+					<a class="list-group-item-lal list-group-item-action" id="лаль" data-toggle="list" href="#word-лаль" role="tab">Лаль</a>
+					<a class="list-group-item-lal list-group-item-action" id="прр" data-toggle="list" href="#word-прр" role="tab">Прр</a>
+					<a class="list-group-item-lal list-group-item-action" id="панта" data-toggle="list" href="#word-панта" role="tab">Панта</a>
+					<a class="list-group-item-lal list-group-item-action" id="метуса" data-toggle="list" href="#word-метуса" role="tab">метуса</a>
+				</div>
 			</div>		
 
 
@@ -90,143 +90,130 @@
 
 	<div class="container">
 
-	  <div class="container-wrap row d-flex justify-content-center">
-		<div class="vk-comments col-12 col-lg-10 p-0">
-		  <div id="vk_comments"></div>
-	  	</div>
-	  </div> 
-
-	</div>
-
-	<footer class="container-fluid bg-secondary">
-	  <div class="text-center text-light frrr">
-
-	    <div class="d-flex justify-content-center">
-		  <ul class="nav">
-			<li class="nav-item">
-			  <a class="nav-link footer-list" target="_blank" href="https://vk.com/iiii_ii_i"><span class="icon-vk"></span></a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link footer-list" target="_blank" href="https://www.instagram.com/erboff/"><span class="icon-instagram"></span></a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link footer-list" target="_blank" href="https://twitter.com/Erboff"><span class="icon-twitter"></span></a>
-			</li>
-		  </ul>
-		</div>
-
-		<div class="d-sm-flex justify-content-sm-around flex-sm-row-reverse">
-
-		  <div class="d-flex justify-content-center my-4 my-sm-0">
-		  	<?php include ; ?>
-		  	<a data-toggle="modal" data-target="#refresh" href="backend/modal.php" class="footer-list mr-4"> Список обновлений</a>
-			<a class="footer-list" data-toggle="modal" data-target="#report" href="#">Сообщить об ошибке</a>
-		  </div>
-
-		  <div class="align-items-center pt-2">
-			<p class="small">&copy; 2018 <span><a target="_blank" class="footer-brand" href="https://libidoguru.ru/wp-content/uploads/2017/10/foto11.jpg">Вербляди</a></span>. Bсе права защищены, если нет, то мне похуй</p>
-		  </div>
+		  <div class="container-wrap row d-flex justify-content-center">
+			<div class="vk-comments col-12 col-lg-10 p-0">
+			  <div id="vk_comments"></div>
+		  	</div>
+		  </div> 
 
 		</div>
 
-			  
-	  </div>
-	</footer>
+		<footer class="container-fluid bg-secondary">
+		  <div class="text-center text-light frrr">
 
+		    <div class="d-flex justify-content-center">
+			  <ul class="nav">
+				<li class="nav-item">
+				  <a class="nav-link footer-list" target="_blank" href="https://vk.com/iiii_ii_i"><span class="icon-vk"></span></a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link footer-list" target="_blank" href="https://www.instagram.com/erboff/"><span class="icon-instagram"></span></a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link footer-list" target="_blank" href="https://twitter.com/Erboff"><span class="icon-twitter"></span></a>
+				</li>
+			  </ul>
+			</div>
 
+			<div class="d-sm-flex justify-content-sm-around flex-sm-row-reverse">
+			  <div class="d-flex justify-content-center my-4 my-sm-0">
+			   <a class="footer-list mr-4 modal-btn" data-toggle="modal" data-target="#refresh" href="#">Список обновлений</a>
+				<a class="footer-list modal-btn" data-toggle="modal" data-target="#report" href="#">Сообщить об ошибке</a>
+			  </div>
 
+			  <div class="align-items-center pt-2">
+				<p class="small">&copy; 2018 <span><a target="_blank" class="footer-brand" href="https://libidoguru.ru/wp-content/uploads/2017/10/foto11.jpg">Вербляди</a></span>. Bсе права защищены, если нет, то мне похуй</p>
+			  </div>
+			</div>
 
+		  </div>
+		</footer>
 
+		<div id="placeForModal"></div>
 
-	<!-- Yandex.Metrika counter -->
-	<!-- <script>
-	    (function (d, w, c) {
-	        (w[c] = w[c] || []).push(function() {
-	            try {
-	                w.yaCounter48313265 = new Ya.Metrika({
-	                    id:48313265,
-	                    clickmap:true,
-	                    trackLinks:true,
-	                    accurateTrackBounce:true,
-	                    webvisor:true
-	                });
-	            } catch(e) { }
-	        });
-	
-	        var n = d.getElementsByTagName("script")[0],
-	            s = d.createElement("script"),
-	            f = function () { n.parentNode.insertBefore(s, n); };
-	        s.type = "text/javascript";
-	        s.async = true;
-	        s.src = "https://mc.yandex.ru/metrika/watch.js";
-	
-	        if (w.opera == "[object Opera]") {
-	            d.addEventListener("DOMContentLoaded", f, false);
-	        } else { f(); }
-	    })(document, window, "yandex_metrika_callbacks");
-	</script> 
-	<noscript><div><img src="https://mc.yandex.ru/watch/48313265" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
-	<!-- /Yandex.Metrika counter -->	
+		<!-- Yandex.Metrika counter -->
+		<script>
+		    (function (d, w, c) {
+		        (w[c] = w[c] || []).push(function() {
+		            try {
+		                w.yaCounter48313265 = new Ya.Metrika({
+		                    id:48313265,
+		                    clickmap:true,
+		                    trackLinks:true,
+		                    accurateTrackBounce:true,
+		                    webvisor:true
+		                });
+		            } catch(e) { }
+		        });
+		
+		        var n = d.getElementsByTagName("script")[0],
+		            s = d.createElement("script"),
+		            f = function () { n.parentNode.insertBefore(s, n); };
+		        s.type = "text/javascript";
+		        s.async = true;
+		        s.src = "https://mc.yandex.ru/metrika/watch.js";
+		
+		        if (w.opera == "[object Opera]") {
+		            d.addEventListener("DOMContentLoaded", f, false);
+		        } else { f(); }
+		    })(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="https://mc.yandex.ru/watch/48313265" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->							
 		
 		<!-- Optional JavaScript -->
 		<script src="js/libs.min.js"></script>
 		<script src="js/contract.js"></script>
 		<script src="https://vk.com/js/api/openapi.js?159"></script>
 		
+		
 		<script>VK.init({apiId: 6730916, onlyWidgets: true});</script>
-		<script>
-		  var comments = function () {
-		  	VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*", pageUrl: "https://verblyadi.000webhostap.com"});
-		  }
-		</script>		
 		<script>
 			let showed = false,
 				lastScroll;
 
 			$(window).scroll(function() {
 				let winScroll = $(this).scrollTop();
+				$('#prr')['slide' + (winScroll == 0 || winScroll > 530 ? 'Down' : 'Up')](250);
 
-				$('#prr')['slide' + (winScroll == 0 || winScroll > 530 ? 'Down' : 'Up')](250)
-
-				if (!showed) {
-					if (winScroll > $('#vk_comments').offset().top - 600) {
-						VK.Widgets.Comments("vk_comments", {
-							limit: 10, attach: "*", pageUrl: "https://verblyadi.000webhostap.com"
-						});
-				  		showed = true;
-					}
-				}
+				if (!showed & winScroll > $('#vk_comments').offset().top - 600) {
+					VK.Widgets.Comments("vk_comments", {
+						limit: 10, attach: "*", pageUrl: "https://verblyadi.000webhostap.com"
+					});
+			  		showed = true;
+				};
 			});
 
-			$('#prr').on('click', function() {
+			$('#prr').on('click', function(event) {
+			if (event.target.nodeName === 'DIV') {
 				let height = 0;
 
 				if ($(window).scrollTop() < 20) {
-					$('#prr').attr('title', 'Наверх');
 					height = lastScroll;
-				}else {
-					lastScroll = $(window).scrollTop();$('#prr').attr('title', 'Обратно');
-				}
+				} else lastScroll = $(window).scrollTop();
 
 				$('html,body').animate({
 	           		scrollTop: height
 	        	}, 100);
-		    });
+	        }});
+		</script>
+		<script >
+			var modal = document.getElementsByClassName('modal-btn'),
+				placeForModal = document.getElementById('placeForModal');
+
+			for (let i = 0; i < modal.length; i++) {
+				let modalTarget = (modal[i].dataset.target).slice(1);
+
+				$.ajax({
+					url: `backend/${modalTarget}.php`,
+					type: 'POST',
+					success: function(data){
+						let div = document.createElement('div');
+					    div.innerHTML = data;
+					    placeForModal.appendChild(div)
+					}
+				});
+			};
 		</script>
 	</body>
 </html>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
