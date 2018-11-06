@@ -38,7 +38,7 @@
 				    	<a class="nav-item nav-link active" href="https://verblyadi.000webhostapp.com/">главная</a>
 				    	<a class="nav-item nav-link" href="gallery.html">галерея</a>
 				    	<a class="nav-item nav-link" href="dictionary.html">словарь</a>
-				    	<a class="nav-item nav-link" href="test.html">prrr</a>
+				    	<a class="nav-item nav-link" href="test.html">поиграца</a>
 				      </div>
 				  	</div>									  	
 
@@ -142,8 +142,7 @@
 				    </blockquote>
 				  </div>
 			    </div>
-
-			  
+		  
 				<div class="col-12 col-md-10 description border">
 				  <p>Конечно же, это далеко не полный список всех наших сотрудников, просто мы хотели показать насколько разный у нас персонал и должности.</p>
 				</div>
@@ -327,9 +326,9 @@
 					type: 'POST',
 					success: function(data){
 						let div = document.createElement('div');
-					        div.innerHTML = data;
-					        placeForModal.appendChild(div);
-					        if (modalTarget == 'refresh') markNewUpdates();
+					    div.innerHTML = data;
+					    placeForModal.appendChild(div);
+					    if (modalTarget == 'refresh') markNewUpdates();
 					}
 				});
 			};
