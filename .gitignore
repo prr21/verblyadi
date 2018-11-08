@@ -1,5 +1,6 @@
 *.txt
 backend/
 node_modules/
+*json
 dist/img/
 dist/fonts/
