@@ -71,7 +71,7 @@ gulp.task('watch',['browser-sync', 'sass', 'css-libs','scripts'] ,function() {
 })
 
 gulp.task('build',['clean','img','scripts', 'sass', 'css-libs'] ,function() {
-	var buildCss = gulp.src(['app/css/verblyadi.min.css', 'app/css/icon.css'])
+	var buildCss = gulp.src(['app/css/style.min.css', 'app/css/icon.css'])
 	.pipe(gulp.dest('dist/css'));
 
 	var buildFonts = gulp.src('app/fonts/**/*')
