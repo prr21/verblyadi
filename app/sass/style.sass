@@ -1,18 +1,68 @@
-//  @media screen and (max-width: 576px){ 
-//     .wrap-header h2 {
-//         font-size: 40px !important;
-//     }
-// }
+@media (min-width: 576px)
+	.navbar
+	.navbar-content
+		.nav-item
+			padding-right: .5rem !important
+			padding-left: .5rem !important
+	
+// @media (min-width: 768px)
+
+
+// @media (min-width: 992px)
+	
+
+@media (min-width: 1200px)
+	.lg-around
+		justify-content: space-around !important
+
+*
+	box-sizing: border-box
 
 body
 	margin: 0 auto
 	background-color: #Eff8f1
-
+	font-weight: 400
+	line-height: 1.5
+	color: #212529
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
 header
 	height: 1px
 
+a
+	color: #007bff
+	text-decoration: none
+	background-color: transparent
+	&:hover
+		color: #0056b3
+		text-decoration: underline
+
 p
-	margin-bottom: 0.8rem
+	margin-bottom: 0
+
+.flex
+	display: flex
+	&.between
+		justify-content: space-between
+
+.row	
+	margin-left: -15px
+	margin-right: -15px
+
+.navbar
+	padding: .5rem 1rem
+	.navbar-content
+		text-transform: uppercase
+		align-items: center
+		.navbar-nav
+			display: flex
+			flex-direction: row
+			.nav-item
+				display: block
+				color: rgba(0,0,0,.5)
+				padding: .5rem 1rem
+				&.active
+					color: rgba(0,0,0, .9)
+
 
 .background-header-index
 	min-height: 530px
@@ -21,9 +71,11 @@ p
 	position: relative
 
 .nav-header
+	width: 100%
 	font-size: 1.1rem
 	background-color: rgba(232, 237, 252, 0.95)
 	position: fixed
+	padding: 0
 	margin: 0 auto
 	z-index: 99
 	border-bottom: 1px solid #dee2e6
