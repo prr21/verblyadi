@@ -34,7 +34,7 @@ gulp.task('scripts', function() {
 		'app/libs/popper.min.js'])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
-	.pipe(gulp.dest('app/js'))
+	.pipe(gulp.dest('app/js/bundle'))
 })
 
 gulp.task('css-libs', function() {
@@ -67,7 +67,7 @@ gulp.task('watch',['browser-sync', 'sass', 'css-libs','scripts'] ,function() {
 	gulp.watch('app/sass/*.sass', ['sass', 'css-libs', browserSync.reload]);
 	gulp.watch('app/*.html', browserSync.reload);
 	gulp.watch('app/css/*.css', ['css-libs', browserSync.reload]);
-	gulp.watch('app/js/*.js', browserSync.reload);
+	gulp.watch('app/js/**/*.js', browserSync.reload);
 })
 
 gulp.task('build',['clean','img','scripts', 'sass', 'css-libs'] ,function() {
