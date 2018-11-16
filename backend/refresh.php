@@ -27,5 +27,6 @@ echo '<div class="modal fade" id="refresh" tabindex="-1" role="dialog" aria-hidd
 	    
 	    </div>
 	  </div>
-	</div>'
+	</div>
+	<script src="js/parts/markNewUpdates.js"></script>'
 ?>
