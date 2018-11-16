@@ -1,5 +1,4 @@
 *.txt
-backend/
 node_modules/
 *.json
 dist/img/
