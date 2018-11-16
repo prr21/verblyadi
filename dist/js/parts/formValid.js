@@ -86,4 +86,4 @@ function formValid(form) {
 
 		} else messageInp.classList.remove("is-invalid")
 	}
-}
+};

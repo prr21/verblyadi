@@ -16,3 +16,4 @@ function markNewUpdates() {
 		else break;
 	}
 }
+markNewUpdates();
