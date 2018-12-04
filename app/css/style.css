@@ -1,0 +1,327 @@
+@media (min-width: 576px) {
+  .navbar-content .nav-item {
+    padding-right: .5rem !important;
+    padding-left: .5rem !important; }
+  .container {
+    max-width: 540px !important; }
+  .sm-flex {
+    display: flex !important; }
+  .sm-block {
+    display: block !important; } }
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px !important; }
+  .md-flex {
+    display: flex !important; }
+    .md-flex.j-c-center {
+      justify-content: center !important; }
+    .md-flex.j-c-between {
+      justify-content: space-between !important; } }
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px !important; }
+  .lg-flex {
+    display: flex !important; }
+    .lg-flex.j-c-around {
+      justify-content: space-around !important; }
+  .header-text {
+    padding: 1.5rem !important; }
+  .person-card {
+    margin-bottom: 1.5rem; }
+  .person-body {
+    align-items: center; } }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px !important; }
+  .container-content {
+    padding: 1.5rem !important; } }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  background-color: #Eff8f1;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; }
+
+header {
+  height: 1px; }
+
+footer {
+  padding: 15px 0 30px; }
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent; }
+  a:hover {
+    color: #0056b3;
+    text-decoration: underline; }
+
+p {
+  margin-bottom: .8rem; }
+
+.frrr {
+  margin: 0 auto;
+  max-width: 1440px; }
+
+.flex {
+  display: flex; }
+  .flex.j-c-between {
+    justify-content: space-between; }
+  .flex.j-c-center {
+    justify-content: center; }
+  .flex.j-c-around {
+    justify-content: space-around; }
+
+.none {
+  display: none; }
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.col {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  flex-wrap: wrap; }
+
+.container-wrap {
+  margin-top: 7vmax; }
+
+.container-wrap-header {
+  min-width: 100%;
+  margin-bottom: 30px; }
+  .container-wrap-header .container-header-title {
+    text-align: center;
+    font-style: italic; }
+    .container-wrap-header .container-header-title h2 {
+      display: inline-block;
+      transform: scaleX(0.7);
+      font-size: 45px;
+      font-weight: 500;
+      margin-bottom: 0; }
+      .container-wrap-header .container-header-title h2::after {
+        content: "";
+        display: block;
+        margin: 0.5vw auto;
+        width: 50%;
+        border-bottom: 2px solid red; }
+
+.container-content {
+  padding: .5rem;
+  border: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+  align-items: center;
+  text-align: center;
+  max-width: 100%; }
+
+.info-content {
+  background-color: orange;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  border: 3px dotted yellow; }
+
+.navbar {
+  padding: .5rem 1rem; }
+  .navbar .navbar-content {
+    text-transform: uppercase;
+    align-items: center; }
+    .navbar .navbar-content .navbar-nav {
+      display: flex;
+      flex-direction: row; }
+      .navbar .navbar-content .navbar-nav .nav-item {
+        display: block;
+        color: rgba(0, 0, 0, 0.5);
+        padding: .5rem 1rem; }
+        .navbar .navbar-content .navbar-nav .nav-item.active {
+          color: rgba(0, 0, 0, 0.9); }
+
+.background-header-index {
+  min-height: 530px;
+  background: url("../img/camel-header.jpg") no-repeat center top;
+  background-attachment: fixed;
+  position: relative; }
+
+.nav-header {
+  width: 100%;
+  font-size: 1.1rem;
+  background-color: rgba(232, 237, 252, 0.95);
+  position: fixed;
+  padding: 0;
+  margin: 0 auto;
+  z-index: 99;
+  border-bottom: 1px solid #dee2e6; }
+
+.title {
+  font-family: 'Caveat', cursive;
+  font-size: 2.5rem;
+  color: #121612; }
+  .title:hover {
+    color: #494a4c;
+    text-decoration: none;
+    transition: 300ms;
+    text-shadow: 0px 0px 10px rgba(242, 41, 44, 0.5); }
+
+.header-text {
+  background-color: rgba(53, 56, 53, 0.5);
+  position: absolute;
+  bottom: 0;
+  padding: .5rem;
+  text-align: center;
+  border: 1px solid #dee2e6; }
+  .header-text h1 {
+    color: #e8edfc;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0 0 .5rem; }
+
+.person-card {
+  border: 2px solid #f0f0f0;
+  text-align: center; }
+
+.person-info {
+  padding: 25px 35px;
+  background-color: #f5f5f6;
+  border-right: 2px solid #f0f0f0; }
+  .person-info .person-level {
+    font-weight: 600;
+    color: #000; }
+  .person-info img {
+    border-radius: 50%; }
+  .person-info p {
+    margin: 0;
+    color: #6c757d; }
+  .person-info h4 {
+    font-size: 1.5rem;
+    margin: .5rem 0;
+    font-weight: 500;
+    line-height: 1.2; }
+
+.person-body {
+  padding: 1.25rem;
+  background-color: #f8f9fa;
+  padding-right: 1px solid #dee2e6;
+  text-align: left; }
+  .person-body p {
+    margin: 0; }
+
+.person-footer {
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 0;
+  align-items: center; }
+
+.person-blockquote {
+  padding: .5rem;
+  margin: 0; }
+  .person-blockquote p {
+    color: #6c757d;
+    font-style: italic;
+    font-weight: 400; }
+
+.person-card-important {
+  max-width: 900px;
+  text-align: center; }
+
+.person-important-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.3rem;
+  padding: 10px;
+  background-color: #f5f5f6;
+  border: 2px solid #f0f0f0; }
+
+.footer {
+  background-color: #6c757d;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center;
+  color: #f8f9fa; }
+
+.nav-footer {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none; }
+  .nav-footer .nav-item {
+    margin: 5px;
+    padding: 5px; }
+
+li .footer-list {
+  font-size: 1.3rem; }
+
+.footer-list {
+  color: #dae6ed; }
+  .footer-list:hover {
+    color: white; }
+
+.footer-brand {
+  color: inherit; }
+  .footer-brand:hover {
+    color: #dae6ed;
+    text-decoration: none; }
+
+#refresh .modal-body {
+  max-height: 400px;
+  overflow: auto; }
+
+.list-update li {
+  padding: 5px 0; }
+  .list-update li.new {
+    color: red; }
+
+.nav-tablist {
+  position: sticky; }
+
+.lal-word {
+  color: #ff002d;
+  font-style: italic; }
+  .lal-word:hover {
+    color: #980000;
+    text-decoration: none; }
+
+.galery-photogalery {
+  flex-wrap: wrap; }
+
+figure {
+  margin: 0; }
+
+.card-galery-photogalery {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0 5px 10px 0;
+  background-color: #f5f5f6; }
+  .card-galery-photogalery img {
+    max-width: 100%;
+    max-height: 200px; }
+
+.card-photo-top {
+  border-bottom: 2px solid #f0f0f0;
+  background-color: white; }
+
+.card-photo-body {
+  padding: 5px 0; }
+
+.card-photo-footer {
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 6px;
+  font-size: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: rgba(255, 255, 255, 0.55); }

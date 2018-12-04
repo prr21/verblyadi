@@ -1,1 +1,0 @@
-let findLal = require('../parts/findLal.js');
