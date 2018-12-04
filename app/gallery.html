@@ -10,6 +10,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Caveat:400" rel="stylesheet">
 
 		<!-- stylesheet -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/verblyadi.min.css">
 		<link rel="stylesheet" href="css/icon.css">
 
@@ -37,7 +38,7 @@
 				    	<a class="nav-item nav-link" href="https://verblyadi.000webhostapp.com/">Главная</a>
 				    	<a class="nav-item nav-link active" href="#">галерея</a>
 				    	<a class="nav-item nav-link" href="dictionary.html">словарь</a>
-				    	<a class="nav-item nav-link" href="test.html">поиграца</a>
+				    	<a class="nav-item nav-link" href="games.html">поиграца</a>
 				      </div>
 				  	</div>									  	
 
@@ -264,8 +265,8 @@
 		<!-- /Yandex.Metrika counter -->							
 		
 		<!-- Optional JavaScript -->
-		<script src="js/libs.min.js"></script>
-		<script src="js/contract.js"></script>
+		<script src="js/bundle/libs.min.js"></script>
+		<script src="js/bundle/bundle.js"></script>
 		<script src="https://vk.com/js/api/openapi.js?159"></script>
 		
 		
@@ -313,7 +314,6 @@
 						let div = document.createElement('div');
 					    div.innerHTML = data;
 					    placeForModal.appendChild(div);
-					    if (modalTarget == 'refresh') markNewUpdates();
 					}
 				});
 			};
