@@ -28,7 +28,7 @@
 			          <div class="invalid-feedback"></div>
 			        </div>
 			        <div class="mb-3">
-			          <small id="userLevel-help" class="form-text text-muted"><a href="#" onclick="confirm('Вы будете перенапревлены к тесту, все введенные данные будут утеряны, вы уверенны?')? location.href = 'games.html' : alert('Смотри тогда не наеби');" class="nav-link" title="Вы будете направлены к тесту"><span class="icon-info"></span> Не знайте ваш уровень?</a></small>
+			          <small id="userLevel-help" class="form-text text-muted"><a href="#" onclick="confirm("Вы будете перенапревлены к тесту, все введенные данные будут утеряны, вы уверенны?")? location.href = "games.html" : alert("Смотри тогда не наеби");" class="nav-link" title="Вы будете направлены к тесту"><span class="icon-info"></span> Не знайте ваш уровень?</a></small>
 			        </div>
 			  	  </div>
 			      <div class="form-group">
