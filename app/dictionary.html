@@ -175,29 +175,32 @@
 				lastScroll;
 
 			$(window).scroll(function() {
-				let winScroll = $(this).scrollTop();
+				let winScroll = $(this).scrollTop(),
+					winHeight = document.documentElement.clientHeight;
+					
 				$('#prr')['slide' + (winScroll == 0 || winScroll > 530 ? 'Down' : 'Up')](250);
 
-				if (!showed & winScroll > $('#vk_comments').offset().top - 600) {
+				if (!showed & winScroll > $("#vk_comments").offset().top - winHeight - 200) {
 					VK.Widgets.Comments("vk_comments", {
 						limit: 10, attach: "*", pageUrl: "https://verblyadi.000webhostap.com"
 					});
 			  		showed = true;
+			  		alert('prr')
 				};
 			});
 
 			$('#prr').on('click', function(event) {
-			if (event.target.nodeName === 'DIV') {
-				let height = 0;
 
-				if ($(window).scrollTop() < 20) {
-					height = lastScroll;
-				} else lastScroll = $(window).scrollTop();
-
-				$('html,body').animate({
-	           		scrollTop: height
-	        	}, 100);
-	        }});
+				if (event.target.nodeName === 'DIV') {
+					let height = 0;
+					if ($(window).scrollTop() < 20) {
+						height = lastScroll;
+					} else lastScroll = $(window).scrollTop();
+					$('html,body').animate({
+		           		scrollTop: height
+		        	}, 100);
+	        	}
+	    	});
 		</script>
 		<script>
 			var modal = document.getElementsByClassName('modal-btn'),
@@ -205,7 +208,6 @@
 
 			for (let i = 0; i < modal.length; i++) {
 				let modalTarget = (modal[i].dataset.target).slice(1);
-
 				$.ajax({
 					url: `backend/${modalTarget}.php`,
 					type: 'POST',
@@ -217,5 +219,6 @@
 				});
 			};
 		</script>
+	</body>
 	</body>
 </html>

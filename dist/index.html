@@ -294,16 +294,18 @@
 					winHeight = document.documentElement.clientHeight;
 					
 				$('#prr')['slide' + (winScroll == 0 || winScroll > 530 ? 'Down' : 'Up')](250);
-				
+
 				if (!showed & winScroll > $("#vk_comments").offset().top - winHeight - 200) {
 					VK.Widgets.Comments("vk_comments", {
 						limit: 10, attach: "*", pageUrl: "https://verblyadi.000webhostap.com"
 					});
 			  		showed = true;
+			  		alert('prr')
 				};
 			});
 
 			$('#prr').on('click', function(event) {
+
 				if (event.target.nodeName === 'DIV') {
 					let height = 0;
 					if ($(window).scrollTop() < 20) {
